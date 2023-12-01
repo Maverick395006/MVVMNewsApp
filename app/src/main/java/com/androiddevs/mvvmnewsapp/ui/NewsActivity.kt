@@ -2,7 +2,10 @@ package com.androiddevs.mvvmnewsapp.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.androiddevs.mvvmnewsapp.R
+import kotlinx.android.synthetic.main.activity_news.bottomNavigationView
 
 class NewsActivity : AppCompatActivity() {
 
@@ -10,7 +13,7 @@ class NewsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_news)
 
-        
+        bottomNavigationView.setupWithNavController(bottomNavigationView.findNavController())
 
     }
 
